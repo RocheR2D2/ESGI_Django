@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  create_first_project:
+    build: .
+    volumes:
+      - ./:/code
