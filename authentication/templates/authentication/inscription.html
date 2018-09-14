@@ -1,0 +1,14 @@
+{% extends 'authentication/base.html' %}
+{% block content %}
+	<h1>Inscription</h1>
+	<form method="POST">
+		{% csrf_token %}
+
+		{% if form.errors %}
+			<p>Il y a une erreur</p>
+		{% endif %}
+
+		{{ form.as_ul }}
+	<button class="btn btn-block mt-3 mb-1 btn-outline-success" type="submit">Inscription</button>
+	</form>
+{% endblock %}
