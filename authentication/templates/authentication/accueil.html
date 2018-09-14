@@ -1,0 +1,9 @@
+{% extends 'authentication/base.html' %}
+{% block content %}
+	<h1>Acceuil</h1>
+	{% if user.is_authenticated %}
+		<p>Nom: {{ user.first_name }} {{ user.last_name }}</p>
+		<p>Pseudo: {{ user.username }}</p>
+		<p>Email: {{ user.email }}</p>
+	{% endif %}
+{% endblock %}
